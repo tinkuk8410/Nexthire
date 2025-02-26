@@ -1,0 +1,174 @@
+
+
+/* Responsive Design */
+
+/* For medium-sized screens (tablets, 768px - 1024px) */
+
+@media (min-width: 375px) {
+
+    .second-nav-cont {
+        display: none;
+    }
+
+    .first-nav-cont {
+
+        width: 100%;
+        height: 10vh;
+        padding: 10px;
+    
+        backdrop-filter: blur(10px);
+        box-shadow: 0px 0px 30px rgba(227, 228, 237, 0.37);
+        border: 2px solid rgba(255, 255, 255, 0.085);
+    
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    
+        transition: all 0.3s ease-in-out;
+    }
+
+    .first-nav-cont ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+        list-style: none; 
+        gap: 20px; 
+    }
+
+    .first-nav-cont li {
+        text-align: center;
+        font-size: 0.5rem;
+    }
+
+    .web-logo {
+        width: 30px;
+        /* Reduce logo size */
+    }
+
+    .a-style {
+        text-align: center;
+        color: black;
+        text-decoration: none;
+
+        font-size: smaller;
+    }
+    .first-nav-cont button {
+        color: rgb(0, 0, 0);
+        padding: 10px; 
+        font-size: 0.1rem;
+    }
+
+    
+}
+
+/* For large-sized screens (laptops,  1024px) */
+@media (min-width: 1024px) {
+
+
+
+    .first-nav-cont {
+
+        display: none;
+        
+    }
+    .second-nav-cont {
+
+        width: 98%;
+        height: 10vh;
+        padding: 20px;
+        margin-right: 10px;
+        border-radius: 10px;
+
+        backdrop-filter: blur(10px);
+        box-shadow: 0px 0px 30px rgba(151, 152, 162, 0.955);
+        border: 2px solid rgba(255, 255, 255, 0.085);
+    
+        display: flex;
+        position: sticky;
+        top: 15px;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 3;
+        transition: all 0.3s ease-in-out;
+    }
+    .second-nav-cont ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+        list-style: none; 
+        gap: 20px; 
+    }
+
+    .web-logo {
+        width: 60px;
+        transition: width 0.3s ease-in-out;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+/* .nav-cont ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    list-style: none; 
+    gap: 20px; 
+} */
+
+/* .nav-cont li {
+    text-align: center;
+    color: aliceblue;
+}
+
+.a-style {
+    color: aliceblue;
+    text-decoration: none; 
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.a-style:hover {
+    color: rgb(183, 116, 80);
+}
+
+.web-logo {
+    width: 60px;
+    transition: width 0.3s ease-in-out;
+}
+
+.log-out {
+    width: auto;
+    padding: 10px 15px;
+    font-size: 1rem;
+    text-align: center;
+    border-radius: 5px;
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.log-out:hover {
+    background-color: #c82333;
+}  */
+
+
+/* Responsive Design */
+
+/* For medium-sized screens (tablets, 768px - 1024px) */

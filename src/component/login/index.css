@@ -1,0 +1,55 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.card-body {
+  padding: 5px;
+}
+
+.log-in {
+  border: none;
+  outline: none;
+  background-color: #ff6219;
+  border-radius: 0.5rem;
+  color: white;
+  padding: 12px 20px;
+  width: 100%;
+}
+
+.log-in:hover {
+  background-color: #ff8c00;
+}
+
+h5.fw-normal {
+  color: #333;
+}
+
+.input-field:focus{
+  outline: none; 
+  box-shadow: none;
+}
+
+.input-field {
+    
+  outline: 0;
+  border-width: 0 0 2px;
+  border-color: #e75c13;
+ 
+}
+
+@media (max-width: 768px) {
+  .col-md-6 {
+    display: none;
+  }
+
+  .col-lg-7 {
+    padding-top: 10px;
+  }
+}
