@@ -13,7 +13,7 @@ const Home = ()=>{
         <h1>"Connecting Talent with Opportunity – Start Your Journey Today!"</h1>
       </div>
 
-      <marquee behavior='fast' className='marqee-cont' >Let sucure your career and find job with us. we'll never dissappoint you. </marquee>
+      <marquee behavior='fast' className='marqee-cont' >Let secure your career and find job with us. we'll never dissappoint you. </marquee>
             
     </div>
     

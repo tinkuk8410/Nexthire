@@ -80,13 +80,8 @@ const Job = () => {
         <div className='row w-100 p-2' >
 
           <div className='col-4 ' >
-            {loading ?
-              <div className='d-flex w-100 justify-content-center align-items-center' style={{ height: '75vh' }}>
-                <div className='loader'></div>
-              </div>
-              :
+            
               <FilterSection />
-            }
             
           </div>
 

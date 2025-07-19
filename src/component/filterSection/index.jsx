@@ -10,6 +10,8 @@ const FilterSection = () => {
 
   });
 
+  const [loading, setLoading] = useState(false);
+
   const empTypesList = [
     {
       label: 'Full Time',
@@ -54,6 +56,8 @@ const FilterSection = () => {
 
     const fetchApi = async () => {
 
+      setLoading(true);
+
       const api = "https://apis.ccbp.in/profile";
 
       const option = {
@@ -75,7 +79,8 @@ const FilterSection = () => {
 
         if (response.ok === true) {
 
-          setValue({ ...allValues, profileDetails: data.profile_details })
+          setValue({ ...allValues, profileDetails: data.profile_details });
+          setLoading(false);
 
         }
 
@@ -95,18 +100,30 @@ const FilterSection = () => {
   const profileDetails = () => (
 
     <div className='profile-cont bg-primary-subtle p-3 rounded-4 d-flex gap-4 align-items-center'>
-      <div >
+      {
+        loading ?
 
-        <img src={profileDetail.profile_image_url} width='100px' />
+          <div className='d-flex w-100 justify-content-center align-items-center' style={{ height: '75vh' }}>
+            <div className='loader'></div>
+          </div>
+          :
 
-      </div>
+          <>
 
-      <div>
+            <div >
 
-        <h4><b>{profileDetail.name}</b></h4>
-        <p>{profileDetail.short_bio}</p>
+              <img src={profileDetail.profile_image_url} width='100px' />
 
-      </div>
+            </div>
+
+            <div>
+
+              <h4><b>{profileDetail.name}</b></h4>
+              <p>{profileDetail.short_bio}</p>
+
+            </div>
+          </>
+      }
     </div>
 
   )
