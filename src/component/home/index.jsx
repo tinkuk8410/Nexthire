@@ -10,7 +10,7 @@ const Home = ()=>{
       <Header/>
 
       <div className='d-flex justify-content-center align-items-center w-100 text-center' style={{ height: '100vh' }}>
-        <h1 className='text-center'>"Connecting Talent with Opportunity – Start Your Journey Today!"</h1>
+        <h1 className='text-white text-center'>"Connecting Talent with Opportunity <br /> Start Your Journey Today!"</h1>
       </div>
 
 
