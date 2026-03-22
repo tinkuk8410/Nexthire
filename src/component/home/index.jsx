@@ -3,6 +3,7 @@ import Header from '../header';
 import { useState, useEffect } from 'react';
 import { FaSearch, FaArrowRight, FaBriefcase, FaUsers, FaChartLine, FaGlobe, FaStar, FaCheckCircle } from 'react-icons/fa';
 import { IoLocationSharp } from 'react-icons/io5';
+import { Link } from 'react-router-dom';
 
 const Home = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -88,9 +89,9 @@ const Home = () => {
                     placeholder='Job title, keywords, or company'
                     className='search-input'
                   />
-                  <button className='search-btn'>
+                  <Link to="/job" className='search-btn'>
                     <FaSearch /> Search Jobs
-                  </button>
+                  </Link>
                 </div>
                 <p className='popular-tags'>
                   Popular: <span>Software Engineer</span> • <span>Data Scientist</span> • <span>Product Manager</span> • <span>Remote</span>

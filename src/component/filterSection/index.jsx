@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import './index.css'
 import Cookies from 'js-cookie';
 
-const FilterSection = () => {
+const FilterSection = ({ changeEmpType, changeSalary, selectedEmpTypes, selectedSalary }) => {
 
   const [allValues, setValue] = useState({
 
@@ -139,7 +139,7 @@ const FilterSection = () => {
 
           <li className='emp-cont' key={e.empTypesListId} >
 
-            <input type="checkbox" value={e.empTypesListId} id={e.empTypesListId} />
+            <input type="checkbox" value={e.empTypesListId} id={e.empTypesListId} onChange={handleOnChangeEmpType} checked={selectedEmpTypes.includes(e.empTypesListId)}/>
             <label htmlFor={e.empTypesListId} style={{ marginTop: "7px" }} >{e.label}</label>
 
           </li>
@@ -162,7 +162,7 @@ const FilterSection = () => {
 
           <li className='emp-cont' key={e.salaryRangeId} >
 
-            <input type="radio" value={e.salaryRangeId} id={e.salaryRangeId} name='salaryRange'/>
+            <input type="radio" value={e.salaryRangeId} id={e.salaryRangeId} name='salaryRange' onChange={handleOnSalaryChange} checked={selectedSalary === e.salaryRangeId}/>
             <label htmlFor={e.salaryRangeId} style={{ marginTop: "7px" }} >{e.label}</label>
 
           </li>
@@ -175,6 +175,13 @@ const FilterSection = () => {
     </>
   )
 
+   const handleOnChangeEmpType = (e) => {
+    changeEmpType(e)
+  }
+
+  const handleOnSalaryChange = (e) => {
+    changeSalary(e)
+  }
 
   return (
     <>

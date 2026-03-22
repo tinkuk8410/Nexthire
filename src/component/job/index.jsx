@@ -16,6 +16,7 @@ const Job = () => {
 
   })
 
+
   const [loading, setLoading] = useState(false);
 
   const token = Cookies.get("jwtToken");
@@ -56,7 +57,7 @@ const Job = () => {
 
     fetchJobs();
 
-  }, [allValues.searchIn]);
+  }, [ allValues.searchIn, allValues.empType, allValues.salaryRange]);
 
   const handleSearchInput = (e) => {
 
@@ -68,6 +69,18 @@ const Job = () => {
       setValues({ ...allValues, searchIn: "" });
     }
 
+  }
+  const handleChangeEmpType = (e) => {
+    const { value, checked } = e.target
+    if (checked) {
+      setValues({ ...allValues, empType: [...allValues.empType, value] })
+    } else {
+      setValues({ ...allValues, empType: allValues.empType.filter(eachType => eachType !== value) })
+    }
+  }
+
+  const handleChangeSalary = (e) => {
+    setValues({ ...allValues, salaryRange: e.target.value });
   }
 
   return (
@@ -81,7 +94,11 @@ const Job = () => {
 
           <div className='col-4 ' >
             
-              <FilterSection />
+              <FilterSection 
+              changeEmpType={handleChangeEmpType} 
+              changeSalary={handleChangeSalary} 
+              selectedEmpTypes={allValues.empType}     
+              selectedSalary={allValues.salaryRange} />
             
           </div>
 
