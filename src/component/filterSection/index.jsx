@@ -14,6 +14,7 @@ const FilterSection = () => {
 
   const empTypesList = [
     {
+  
       label: 'Full Time',
       empTypesListId: 'FULLTIME',
     },
@@ -107,7 +108,6 @@ const FilterSection = () => {
             <div className='loader'></div>
           </div>
           :
-
           <>
 
             <div >
@@ -139,8 +139,8 @@ const FilterSection = () => {
 
           <li className='emp-cont' key={e.empTypesListId} >
 
-            <input type="checkbox" value={e.empTypesListId} id='e.empTypesListId' />
-            <label htmlFor="e.empTypesListId" style={{ marginTop: "7px" }} >{e.label}</label>
+            <input type="checkbox" value={e.empTypesListId} id={e.empTypesListId} />
+            <label htmlFor={e.empTypesListId} style={{ marginTop: "7px" }} >{e.label}</label>
 
           </li>
 
@@ -162,8 +162,8 @@ const FilterSection = () => {
 
           <li className='emp-cont' key={e.salaryRangeId} >
 
-            <input type="radio" value={e.salaryRangeId} id='e.salaryRangeId' />
-            <label htmlFor="e.salaryRangeId" style={{ marginTop: "7px" }} >{e.label}</label>
+            <input type="radio" value={e.salaryRangeId} id={e.salaryRangeId} name='salaryRange'/>
+            <label htmlFor={e.salaryRangeId} style={{ marginTop: "7px" }} >{e.label}</label>
 
           </li>
 

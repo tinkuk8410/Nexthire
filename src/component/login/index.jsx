@@ -18,7 +18,6 @@ const Login = () => {
       
     }
    
-
   },[]);
 
   const [allValues,setValues] = useState({
