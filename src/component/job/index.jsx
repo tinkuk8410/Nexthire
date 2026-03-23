@@ -59,6 +59,7 @@ const Job = () => {
 
   }, [ allValues.searchIn, allValues.empType, allValues.salaryRange]);
 
+
   const handleSearchInput = (e) => {
 
     if (e.key === "Enter") {
@@ -93,15 +94,15 @@ const Job = () => {
         <div className='row w-100 p-2' >
 
           <div className='col-4 ' >
-            
+                       
               <FilterSection 
-              changeEmpType={handleChangeEmpType} 
-              changeSalary={handleChangeSalary} 
-              selectedEmpTypes={allValues.empType}     
-              selectedSalary={allValues.salaryRange} />
+                changeEmpType={handleChangeEmpType} 
+                changeSalary={handleChangeSalary} 
+                selectedEmpTypes={allValues.empType}     
+                selectedSalary={allValues.salaryRange} 
+              />
             
           </div>
-
 
           <div className='col-8 p-2'>
 
@@ -125,7 +126,7 @@ const Job = () => {
         </div>  {/* row close */}
 
       </div> {/* container close */}
-
+      
     </div>
 
 

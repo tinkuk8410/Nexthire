@@ -225,15 +225,15 @@ const Home = () => {
       </section>
       
       {/* Marquee */}
-      <div className='marquee-container'>
-        <marquee behavior='scroll' className='marquee-content'>
-          🚀 Let secure your career and find job with us. We'll never disappoint you! • 
-          🌟 10,000+ jobs added daily • 
-          💼 Top companies hiring now • 
-          🎯 Your dream job is just a click away •
-          🔥 Apply before positions fill up!
-        </marquee>
-      </div>
+<div className='marquee-container'>
+  <div className='marquee-content'>
+    🚀 Let secure your career and find job with us. We'll never disappoint you! • 
+    🌟 10,000+ jobs added daily • 
+    💼 Top companies hiring now • 
+    🎯 Your dream job is just a click away •
+    🔥 Apply before positions fill up!
+  </div>
+</div>
     </div>
   );
 };

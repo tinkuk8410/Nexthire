@@ -139,7 +139,12 @@ const FilterSection = ({ changeEmpType, changeSalary, selectedEmpTypes, selected
 
           <li className='emp-cont' key={e.empTypesListId} >
 
-            <input type="checkbox" value={e.empTypesListId} id={e.empTypesListId} onChange={handleOnChangeEmpType} checked={selectedEmpTypes.includes(e.empTypesListId)}/>
+            <input type="checkbox" 
+              value={e.empTypesListId} 
+              id={e.empTypesListId} 
+              onChange={handleOnChangeEmpType} 
+              checked={selectedEmpTypes.includes(e.empTypesListId)}
+            />
             <label htmlFor={e.empTypesListId} style={{ marginTop: "7px" }} >{e.label}</label>
 
           </li>
@@ -162,7 +167,13 @@ const FilterSection = ({ changeEmpType, changeSalary, selectedEmpTypes, selected
 
           <li className='emp-cont' key={e.salaryRangeId} >
 
-            <input type="radio" value={e.salaryRangeId} id={e.salaryRangeId} name='salaryRange' onChange={handleOnSalaryChange} checked={selectedSalary === e.salaryRangeId}/>
+            <input type="radio" 
+              value={e.salaryRangeId} 
+              id={e.salaryRangeId} 
+              name='salaryRange' 
+              onChange={handleOnSalaryChange} 
+              checked={selectedSalary === e.salaryRangeId}
+            />
             <label htmlFor={e.salaryRangeId} style={{ marginTop: "7px" }} >{e.label}</label>
 
           </li>
