@@ -50,6 +50,7 @@ const DisplayJobs = (prop) => {
           <h6 style={{ display: 'flex', alignItems: 'center', gap: '10px' }}> <FaStar />{jobsItem.rating}</h6>
 
         </div>
+        
       
       </div>
       <hr />

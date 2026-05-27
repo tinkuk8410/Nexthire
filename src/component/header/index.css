@@ -70,12 +70,12 @@
 
     .first-nav-cont {
 
-        display: none;
+        display: none !important;
         
     }
     .second-nav-cont {
 
-        width: 98%;
+        width: 100%;
         height: 10vh;
         padding: 20px;
         margin-right: 10px;
