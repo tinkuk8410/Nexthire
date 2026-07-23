@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 
 const Home = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
-  
+
   const testimonials = [
     {
       id: 1,
@@ -34,40 +34,40 @@ const Home = () => {
       text: "The filters and job recommendations helped me find the perfect role!"
     }
   ];
-  
+
   const stats = [
     { icon: <FaBriefcase />, number: "10,000+", label: "Live Jobs" },
     { icon: <FaUsers />, number: "50,000+", label: "Active Candidates" },
     { icon: <FaChartLine />, number: "5,000+", label: "Companies Hiring" },
     { icon: <FaGlobe />, number: "150+", label: "Countries" }
   ];
-  
+
   const features = [
     { icon: <FaSearch />, title: "Smart Search", desc: "Find jobs tailored to your skills and preferences" },
     { icon: <FaCheckCircle />, title: "Easy Apply", desc: "One-click application with your saved profile" },
     { icon: <FaStar />, title: "Top Companies", desc: "Get hired by world's leading companies" },
     { icon: <IoLocationSharp />, title: "Remote & Local", desc: "Find both remote and on-site opportunities" }
   ];
-  
+
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % testimonials.length);
-    }, 5000);
+    }, 3000);
     return () => clearInterval(interval);
   }, [testimonials.length]);
-  
+
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % testimonials.length);
   };
-  
+
   const prevSlide = () => {
     setCurrentSlide((prev) => (prev - 1 + testimonials.length) % testimonials.length);
   };
-  
+
   return (
     <div className='home-main-cont'>
       <Header />
-      
+
       {/* Hero Section */}
       <section className='hero-section'>
         <div className='hero-overlay'></div>
@@ -80,12 +80,12 @@ const Home = () => {
               <p className='hero-subtitle'>
                 Start Your Journey Today! Find your dream job with thousands of opportunities waiting for you.
               </p>
-              
+
               {/* Search Bar */}
               <div className='hero-search'>
                 <div className='search-container'>
-                  <input 
-                    type='text' 
+                  <input
+                    type='text'
                     placeholder='Job title, keywords, or company'
                     className='search-input'
                   />
@@ -98,7 +98,7 @@ const Home = () => {
                 </p>
               </div>
             </div>
-            
+
             <div className='col-lg-5' data-aos="fade-left">
               <div className='hero-stats-card'>
                 <div className='stats-grid'>
@@ -115,7 +115,7 @@ const Home = () => {
           </div>
         </div>
       </section>
-      
+
       {/* Features Section */}
       <section className='features-section'>
         <div className='container'>
@@ -123,7 +123,7 @@ const Home = () => {
             <h2 className='section-title'>Why Choose Us?</h2>
             <p className='section-subtitle'>We make your job search easier and faster</p>
           </div>
-          
+
           <div className='row g-4'>
             {features.map((feature, index) => (
               <div key={index} className='col-md-6 col-lg-3'>
@@ -137,7 +137,7 @@ const Home = () => {
           </div>
         </div>
       </section>
-      
+
       {/* Stats Banner */}
       <section className='stats-banner'>
         <div className='container'>
@@ -169,7 +169,7 @@ const Home = () => {
           </div>
         </div>
       </section>
-      
+
       {/* Testimonials Section */}
       <section className='testimonials-section'>
         <div className='container'>
@@ -177,10 +177,10 @@ const Home = () => {
             <h2 className='section-title'>What Our Users Say</h2>
             <p className='section-subtitle'>Success stories from people who found their dream jobs</p>
           </div>
-          
+
           <div className='testimonial-slider'>
             <button className='slider-btn prev' onClick={prevSlide}>❮</button>
-            
+
             <div className='testimonial-card'>
               <div className='testimonial-image'>
                 <img src={testimonials[currentSlide].image} alt={testimonials[currentSlide].name} />
@@ -195,13 +195,13 @@ const Home = () => {
                 ))}
               </div>
             </div>
-            
+
             <button className='slider-btn next' onClick={nextSlide}>❯</button>
-            
+
             <div className='dots'>
               {testimonials.map((_, index) => (
-                <span 
-                  key={index} 
+                <span
+                  key={index}
                   className={`dot ${currentSlide === index ? 'active' : ''}`}
                   onClick={() => setCurrentSlide(index)}
                 ></span>
@@ -210,7 +210,7 @@ const Home = () => {
           </div>
         </div>
       </section>
-      
+
       {/* CTA Section */}
       <section className='cta-section'>
         <div className='container'>
@@ -223,17 +223,17 @@ const Home = () => {
           </div>
         </div>
       </section>
-      
+
       {/* Marquee */}
-<div className='marquee-container'>
-  <div className='marquee-content'>
-    🚀 Let secure your career and find job with us. We'll never disappoint you! • 
-    🌟 10,000+ jobs added daily • 
-    💼 Top companies hiring now • 
-    🎯 Your dream job is just a click away •
-    🔥 Apply before positions fill up!
-  </div>
-</div>
+      <div className='marquee-container'>
+        <div className='marquee-content'>
+          🚀 Let secure your career and find job with us. We'll never disappoint you! •
+          🌟 10,000+ jobs added daily •
+          💼 Top companies hiring now •
+          🎯 Your dream job is just a click away •
+          🔥 Apply before positions fill up!
+        </div>
+      </div>
     </div>
   );
 };
